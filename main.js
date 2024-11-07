@@ -12,3 +12,17 @@ function getComputerChoice() {
   }
   return result;
 }
+
+function getHumanChoice() {
+  let result = null;
+  let choice = prompt(
+    `Enter your choice, "rock", "paper", or "scissors"`
+  ).toLowerCase();
+
+  if (choice === "rock" || choice === "paper" || choice === "scissors") {
+    result = choice;
+  } else {
+    console.log("Wrong slection not allowed in the game");
+  }
+  return result;
+}
