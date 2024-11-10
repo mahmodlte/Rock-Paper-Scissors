@@ -68,11 +68,11 @@ function playGame() {
   }
 
   if (playerScore > computerScore) {
-    console.log("Human player is the Winner!");
+    alert("Human player is the Winner!");
   } else if (computerScore > playerScore) {
-    console.log("Computer is the Winner!");
+    alert("Computer is the Winner!");
   } else {
-    console.log("No one wins, Tied!");
+    alert("No one wins, Tied!");
   }
 }
 playGame();
