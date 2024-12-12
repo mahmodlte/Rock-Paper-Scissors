@@ -1,6 +1,4 @@
-const rock = document.querySelector("rock");
-const paper = document.querySelector("paper");
-const scissors = document.querySelector("scissors");
+const buttons = document.querySelectorAll("button");
 
 function getComputerChoice() {
   let randomNum = Math.floor(Math.random() * 3) + 1;
@@ -16,11 +14,10 @@ function getComputerChoice() {
   return result;
 }
 
-function getHumanChoice() {
+function getHumanChoice(userChoice) {
   let result = null;
-  let choice = prompt(
-    `Enter your choice, "rock", "paper", or "scissors"`
-  ).toLowerCase();
+  let choice = userChoice.toLowerCase();
+  console.log(choice);
 
   if (choice === "rock" || choice === "paper" || choice === "scissors") {
     result = choice;
@@ -66,5 +63,11 @@ function playGame() {
     }
     console.log(playerScore, computerScore);
   }
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      playRound(getHumanChoice(e.target.innerText), getComputerChoice());
+    });
+  });
 }
+
 playGame();
