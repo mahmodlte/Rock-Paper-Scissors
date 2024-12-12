@@ -62,17 +62,5 @@ function playGame() {
     }
     console.log(playerScore, computerScore);
   }
-
-  for (let i = 0; i <= 5; i++) {
-    playRound(getHumanChoice(), getComputerChoice());
-  }
-
-  if (playerScore > computerScore) {
-    alert("Human player is the Winner!");
-  } else if (computerScore > playerScore) {
-    alert("Computer is the Winner!");
-  } else {
-    alert("No one wins, Tied!");
-  }
 }
 playGame();
