@@ -1,3 +1,7 @@
+const rock = document.querySelector("rock");
+const paper = document.querySelector("paper");
+const scissors = document.querySelector("scissors");
+
 function getComputerChoice() {
   let randomNum = Math.floor(Math.random() * 3) + 1;
   let result;
